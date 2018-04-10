@@ -16,13 +16,32 @@ course on creating an online store
 	shop.html => shop.blade.php 
 
 	3.2. Buyruqlar satrida:
-touch about.blade.php add-to-wishlist.blade.php blog.blade.php cart.blade.php checkout.blade.php contact.blade.php index.blade.php order.blade.php product.blade.php shop.blade.php 
+		touch about.blade.php add-to-wishlist.blade.php blog.blade.php cart.blade.php checkout.blade.php contact.blade.php index.blade.php order.blade.php product.blade.php shop.blade.php 
 
 	3.3. index.html -ni index.blade.php -ga ko'chirish
+
 	3.4. Yonalish qo'shish: Route::view('/', 'index');
+
 	3.5. html asset -larni public papkaga ko'chirish (css,fonts,images,js,sass)
+
 	3.6. index.blade.php ichini to'g'rilash
+
 	3.7. partials papka va layout.blade.php faylini hosil qilish
+
 	3.8. patials -da nav.blade.php va footer.blade.php larni hosil qilish
-	
+
+	3.9. qolgan view va ularni yo'nalishlarini tashkil qilish:
+		about.blade.php, add-to-wishlist.blade.php, blog.blade.php, cart.blade.php, checkout.blade.php, contact.blade.php, order.blade.php, product.blade.php, shop.blade.php 
+		Route::view('/', 'index');
+		Route::view('/about', 'about');
+		Route::view('/add-to-wishlist', 'add-to-wishlist');
+		Route::view('/blog', 'blog');
+		Route::view('/cart', 'cart');
+		Route::view('/checkout', 'checkout');
+		Route::view('/contact', 'contact');
+		Route::view('/order', 'order');
+		Route::view('/product-detail', 'product-detail');
+		Route::view('/shop', 'shop');
+		
+
 
