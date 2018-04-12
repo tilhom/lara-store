@@ -56,7 +56,8 @@ course on creating an online store
 		            $table->string('name')->unique();
 		            $table->string('slug')->unique();
 		            $table->string('details')->nullable();
-		            $table->integer('price');
+		            $table->string('image')->nullable();
+					$table->integer('price');
 		            $table->integer('oldprice');
 		            $table->boolean('sale')->default(false);
 		            $table->boolean('new')->default(false);
@@ -73,11 +74,16 @@ course on creating an online store
 	
 	5.2. ProductsTableSeeder.php 12-ta yozuv ma'lumot bilan to'ldiring,
 	misol uchun:
-	Product::create([
-	            'name' => 'MacBook Pro',
-	            'slug' => 'macbook-pro',
-	            'details' => '15 inch, 1TB SSD, 32GB RAM',
-	            'price' => 249999,
+
+	/*1 */       Product::create([
+	            'name' => 'Floral Dress1',
+	            'slug' => 'floral-dress1',
+	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-5.jpg',
+	            'price' => 30000,
+	            'newprice' => 0,
+	            'sale' => 0,
+	            'new' => 1,
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 
@@ -102,8 +108,13 @@ Route::get('/', 'LandingPageController@index')->name('landing-page');
 	
 		public function index()
 		    {
-		    	 $products = Product::inRandomOrder()->take(8)->get();
+		    	$newproducts = Product::where('new',1)->inRandomOrder()->take(4)->get();
+ 	  			$ourproducts = Product::inRandomOrder()->take(8)->get();
 
-		        return view('index')->with('products', $products);
+        		return view('landing-page.index')->
+        			with('ourproducts', $ourproducts)->
+        			with('newproducts', $newproducts);
 		    }
+
+		    
 

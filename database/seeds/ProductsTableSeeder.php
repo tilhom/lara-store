@@ -13,9 +13,10 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
 /*1 */       Product::create([
-	            'name' => 'FLORAL DRESS1',
+	            'name' => 'Floral Dress1',
 	            'slug' => 'floral-dress1',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-5.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -23,9 +24,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*2*/        Product::create([
-	            'name' => 'FLORAL DRESS2',
+	            'name' => 'Floral Dress2',
 	            'slug' => 'floral-dress2',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-6.jpg',
 	            'price' => 30000,
 	            'newprice' => 19900,
 	            'sale' => 1,
@@ -33,9 +35,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /* 3*/       Product::create([
-	            'name' => 'FLORAL DRESS3',
+	            'name' => 'Floral Dress3',
 	            'slug' => 'floral-dress3',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-7.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -43,9 +46,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*4*/       Product::create([
-	            'name' => 'FLORAL DRESS4',
+	            'name' => 'Floral Dress4',
 	            'slug' => 'floral-dress4',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-8.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -53,9 +57,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
  /*5*/       Product::create([
-	            'name' => 'FLORAL DRESS5',
+	            'name' => 'Floral Dress5',
 	            'slug' => 'floral-dress5',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-9.jpg',
 	            'price' => 30000,
 	            'newprice' => 19900,
 	            'sale' => 1,
@@ -63,9 +68,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*6*/        Product::create([
-	            'name' => 'FLORAL DRESS6',
+	            'name' => 'Floral Dress6',
 	            'slug' => 'floral-dress6',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-10.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -73,9 +79,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
  /*7*/       Product::create([
-	            'name' => 'FLORAL DRESS7',
+	            'name' => 'Floral Dress7',
 	            'slug' => 'floral-dress7',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-11.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -83,9 +90,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
  /*8*/       Product::create([
-	            'name' => 'FLORAL DRESS8',
+	            'name' => 'Floral Dress8',
 	            'slug' => 'floral-dress8',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-12.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -93,9 +101,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*9*/        Product::create([
-	            'name' => 'FLORAL DRESS9',
+	            'name' => 'Floral Dress9',
 	            'slug' => 'floral-dress9',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-13.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -103,9 +112,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*10*/        Product::create([
-	            'name' => 'FLORAL DRESS10',
+	            'name' => 'Floral Dress10',
 	            'slug' => 'floral-dress10',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-14.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -113,9 +123,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*11*/        Product::create([
-	            'name' => 'FLORAL DRESS11',
+	            'name' => 'Floral Dress11',
 	            'slug' => 'floral-dress11',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-15.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,
@@ -123,9 +134,10 @@ class ProductsTableSeeder extends Seeder
 	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
 	        ]);
 /*12*/        Product::create([
-	            'name' => 'FLORAL DRESS12',
+	            'name' => 'Floral Dress12',
 	            'slug' => 'floral-dress12',
 	            'details' => 'Lorem ipsum dolor sit amet, consectetur.',
+	            'image' => 'images/item-16.jpg',
 	            'price' => 30000,
 	            'newprice' => 0,
 	            'sale' => 0,

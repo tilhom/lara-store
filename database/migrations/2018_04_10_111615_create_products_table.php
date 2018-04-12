@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('details')->nullable();
+            $table->string('image')->nullable();
             $table->integer('price');
             $table->integer('newprice')->default(0);
             $table->boolean('sale')->default(false);

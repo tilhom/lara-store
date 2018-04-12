@@ -9,7 +9,11 @@ class LandingPageController extends Controller
 {
     public function index()
     {
- 	  	$products = Product::inRandomOrder()->take(8)->get();
-        return view('index')->with('products', $products);
+ 	  	$newproducts = Product::where('new',1)->inRandomOrder()->take(4)->get();
+ 	  	$ourproducts = Product::inRandomOrder()->take(8)->get();
+
+        return view('landing-page.index')->
+        		with('ourproducts', $ourproducts)->
+        		with('newproducts', $newproducts);
     }
 }
