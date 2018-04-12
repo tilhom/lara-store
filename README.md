@@ -1,7 +1,7 @@
 # lara-store
 course on creating an online store
 
-1. Lavravel tizimini o'rnatish lara-store
+1. Laravel tizimini o'rnatish lara-store
 2. Magazin shablonlarini o'rnatish html-template
 3. Barcha html andoza fayllariga view -lar tayorlash
 	about.html => about.blade.php
@@ -42,6 +42,48 @@ course on creating an online store
 		Route::view('/order', 'order');
 		Route::view('/product-detail', 'product-detail');
 		Route::view('/shop', 'shop');
-		
 
+4. Product modelini hosil qilish: 
+	php artisan make:model Product -m
+	4.2. migratsiyasini to'g'rilash:
+			$table->string('name')->unique();
+            $table->string('slug')->unique();
+            $table->string('details')->nullable();
+            $table->integer('price');
+            $table->text('description');
+
+	4.3. mysql da baza ochish va uni .env fayliga yozish
+
+	4.4. php artizan migrate
+
+5. php artisan make:seeder ProductsTableSeeder
+	5.2. ProductsTableSeeder.php 12-ta yozuv ma'lumot bilan to'ldiring,
+	misol uchun:
+	Product::create([
+	            'name' => 'MacBook Pro',
+	            'slug' => 'macbook-pro',
+	            'details' => '15 inch, 1TB SSD, 32GB RAM',
+	            'price' => 249999,
+	            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+	        ]);
+
+	5.3. DatabaseSeeder.php ga ProductsTableSeeder yozvoring..
+		$this->call(ProductTableSeeder::class);
+
+	5.4. php artisan db:seed
+6. AppServiceProvider -ni  to'g'rilavolish (mariadb -da ham ishlash uchun)
+	use Illuminate\Support\Facades\Schema;
+	...
+    public function boot()
+    {
+          Schema::defaultStringLength(191);
+    }
+
+7.  php artisan make:controller LandingPageController
+		public function index()
+		    {
+		    	 $products = Product::inRandomOrder()->take(8)->get();
+
+		        return view('index')->with('products', $products);
+		    }
 
