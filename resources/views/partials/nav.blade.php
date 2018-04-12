@@ -3,13 +3,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="colorlib-logo"><a href="index.html">Store</a></div>
+					<div id="colorlib-logo"><a href="{{route('landing-page')}}">Store</a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
+						<li class="active"><a href="{{route('landing-page')}}">Home</a></li>
 						<li class="has-dropdown">
-							<a href="shop.html">Shop</a>
+							<a href="{{route('shop.index')}}">Shop</a>
 							<ul class="dropdown">
 								<li><a href="product-detail.html">Product Detail</a></li>
 								<li><a href="cart.html">Shipping Cart</a></li>

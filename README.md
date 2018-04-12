@@ -116,5 +116,12 @@ Route::get('/', 'LandingPageController@index')->name('landing-page');
         			with('newproducts', $newproducts);
 		    }
 
-		    
+9. landing-page view -larni
+
+	landing-page.index
+	landing-page.partials.new-products
+	landing-page.patials.our-products	
+
+10. shop controllerini yasash
+	php artisan make:controller ShopController -r  	    
 
