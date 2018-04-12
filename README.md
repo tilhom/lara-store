@@ -44,19 +44,33 @@ course on creating an online store
 		Route::view('/shop', 'shop');
 
 4. Product modelini hosil qilish: 
+
 	php artisan make:model Product -m
+
 	4.2. migratsiyasini to'g'rilash:
-			$table->string('name')->unique();
-            $table->string('slug')->unique();
-            $table->string('details')->nullable();
-            $table->integer('price');
-            $table->text('description');
+
+			public function up()
+		    {
+		        Schema::create('products', function (Blueprint $table) {
+		            $table->increments('id');
+		            $table->string('name')->unique();
+		            $table->string('slug')->unique();
+		            $table->string('details')->nullable();
+		            $table->integer('price');
+		            $table->integer('oldprice');
+		            $table->boolean('sale')->default(false);
+		            $table->boolean('new')->default(false);
+		            $table->text('description');
+		            $table->timestamps();
+		        });
+		    }
 
 	4.3. mysql da baza ochish va uni .env fayliga yozish
 
 	4.4. php artizan migrate
 
 5. php artisan make:seeder ProductsTableSeeder
+	
 	5.2. ProductsTableSeeder.php 12-ta yozuv ma'lumot bilan to'ldiring,
 	misol uchun:
 	Product::create([
@@ -68,10 +82,11 @@ course on creating an online store
 	        ]);
 
 	5.3. DatabaseSeeder.php ga ProductsTableSeeder yozvoring..
-		$this->call(ProductTableSeeder::class);
+		$this->call(ProductsTableSeeder::class);
 
 	5.4. php artisan db:seed
 6. AppServiceProvider -ni  to'g'rilavolish (mariadb -da ham ishlash uchun)
+	
 	use Illuminate\Support\Facades\Schema;
 	...
     public function boot()
@@ -79,7 +94,12 @@ course on creating an online store
           Schema::defaultStringLength(191);
     }
 
-7.  php artisan make:controller LandingPageController
+7. yangi route yaratish:
+
+Route::get('/', 'LandingPageController@index')->name('landing-page');
+
+8. php artisan make:controller LandingPageController
+	
 		public function index()
 		    {
 		    	 $products = Product::inRandomOrder()->take(8)->get();

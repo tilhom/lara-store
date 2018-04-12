@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::view('/', 'index');
+Route::get('/', 'LandingPageController@index')->name('landing-page');
 Route::view('/about', 'about');
 Route::view('/add-to-wishlist', 'add-to-wishlist');
 Route::view('/blog', 'blog');
